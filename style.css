@@ -5,39 +5,22 @@
   font-family: 'Roboto Serif', serif;
 }
 
-h1{
+h1 {
   text-align: center;
   margin-top: 2rem;
 }
 
-#color-palet{
+#color-palette{
   min-width: 1px;
   min-height: 1px;
-  width: fit-content;
-  height: fit-content;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.color{
+.color {
   border: 1px solid black;
-  width: fit-content;
-  height: fit-content;
+  width: 80px;
+  height: 80px;
   display: inline-block;
-}
-
-.black{
-  background-color: black;
-  width: fit-content;
-  height: fit-content;
-}
-
-.red{
-  background-color: red;
-}
-
-.green{
-  background-color: green;
-}
-
-.blue{
-  background-color: blue;
+  margin: 0.1rem;
 }
