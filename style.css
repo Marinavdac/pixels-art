@@ -3,30 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1{
+  text-align: center;
+}
 #color-palet{
   min-width: 1px;
   min-height: 1px;
+  width: fit-content;
+  height: fit-content;
+
 }
 .color {
   border: 1px solid black;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
 }
 .black {
   background-color: black;
-  width: 1px;
-  height: 1px;
+  width: fit-content;
+  height: fit-content;
 }
 .red {
   background-color: red;
-  width: 1px;
-  height: 1px;
 }
 .green {
   background-color: green;
-  width: 1px;
-  height: 1px;
 }
 .blue {
   background-color: blue;
-  width: 1px;
-  height: 1px;
 }
