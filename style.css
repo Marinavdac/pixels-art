@@ -2,34 +2,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Serif', serif;
 }
+
 h1{
   text-align: center;
+  margin-top: 2rem;
 }
+
 #color-palet{
   min-width: 1px;
   min-height: 1px;
   width: fit-content;
   height: fit-content;
-
 }
-.color {
+
+.color{
   border: 1px solid black;
   width: fit-content;
   height: fit-content;
   display: inline-block;
 }
-.black {
+
+.black{
   background-color: black;
   width: fit-content;
   height: fit-content;
 }
-.red {
+
+.red{
   background-color: red;
 }
-.green {
+
+.green{
   background-color: green;
 }
-.blue {
+
+.blue{
   background-color: blue;
 }
