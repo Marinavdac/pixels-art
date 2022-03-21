@@ -1,20 +1,32 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-};
-.color{
-  border: black solid 1px;
-};
-.black{
+}
+#color-palet{
+  min-width: 1px;
+  min-height: 1px;
+}
+.color {
+  border: 1px solid black;
+}
+.black {
   background-color: black;
-};
-.red{
+  width: 1px;
+  height: 1px;
+}
+.red {
   background-color: red;
-};
-.green{
+  width: 1px;
+  height: 1px;
+}
+.green {
   background-color: green;
-};
-.blue{
+  width: 1px;
+  height: 1px;
+}
+.blue {
   background-color: blue;
-};
+  width: 1px;
+  height: 1px;
+}
