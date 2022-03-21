@@ -10,7 +10,7 @@ h1 {
   margin-top: 2rem;
 }
 
-#color-palette{
+#color-palette {
   min-width: 1px;
   min-height: 1px;
   text-align: center;
@@ -19,8 +19,12 @@ h1 {
 
 .color {
   border: 1px solid black;
-  width: 80px;
-  height: 80px;
+  width: 25px;
+  height: 25px;
   display: inline-block;
   margin: 0.1rem;
+}
+
+#pixel-board {
+  margin: 2rem auto;
 }

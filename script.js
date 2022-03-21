@@ -10,7 +10,7 @@ const section = document.createElement('section');
 body.appendChild(section);
 section.setAttribute('id', 'color-palette');
 
-const colors = ['black', 'blue', 'red', 'green'];
+const colors = ['black', 'midnightblue', 'firebrick', 'darkred'];
 for (let i = 0; i < colors.length; i += 1) {
   const colorItem = colors[i];
 
@@ -19,3 +19,8 @@ for (let i = 0; i < colors.length; i += 1) {
   colorSelector.style.backgroundColor = (`${colorItem}`);
   section.appendChild(colorSelector);
 }
+
+const board = document.createElement('section');
+body.appendChild(board);
+board.setAttribute('id', 'pixel-board');
+
