@@ -19,8 +19,15 @@ for (let i = 0; i < colors.length; i += 1) {
   colorSelector.style.backgroundColor = (`${colorItem}`);
   section.appendChild(colorSelector);
 }
+const middleSection = document.createElement('section');
+middleSection.setAttribute('id', 'buttons');
+body.appendChild(middleSection);
+
+const button = document.createElement('button');
+button.setAttribute('id', 'clear-board');
+middleSection.appendChild(button);
+button.innerText = 'Limpar';
 
 const board = document.createElement('section');
 body.appendChild(board);
 board.setAttribute('id', 'pixel-board');
-
