@@ -27,7 +27,24 @@ const button = document.createElement('button');
 button.setAttribute('id', 'clear-board');
 middleSection.appendChild(button);
 button.innerText = 'Limpar';
+// button.addEventListener('click' function limpar(event) {
+//   // set all to white
+//   // set selected to black
+// })
 
 const board = document.createElement('section');
 body.appendChild(board);
 board.setAttribute('id', 'pixel-board');
+
+const pixelNumbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < pixelNumbers.length; i += 1) {
+  const pixWidth = document.createElement('div');
+  pixWidth.classList = ('pixel width');
+  board.appendChild(pixWidth);
+  for (let j = 1; j < pixelNumbers.length; j += 1) {
+    const pixHeight = document.createElement('div');
+    pixHeight.classList = ('pixel height');
+    pixHeight.style.backgroundColor = ('white');
+    board.appendChild(pixHeight);
+  }
+}
