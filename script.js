@@ -60,7 +60,7 @@ button.addEventListener('click', function handleClean() {
 const board = document.createElement('section');
 body.appendChild(board);
 board.setAttribute('id', 'pixel-board');
-let input = '10';
+let input = '5';
 const pixelNumbers = Math.pow(input, 2);
 
 for (let i = 0; i < pixelNumbers; i += 1) {
