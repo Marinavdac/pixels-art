@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 const body = document.querySelector('body');
 const titleEl = document.createElement('h1');
 body.appendChild(titleEl);
@@ -10,7 +11,23 @@ const section = document.createElement('section');
 body.appendChild(section);
 section.setAttribute('id', 'color-palette');
 
-const colors = ['black', 'midnightblue', 'firebrick', 'darkred'];
+function generateRandom(maxValue) {
+  return Math.floor(Math.random() * maxValue);
+}
+
+function pickColors() {
+  const h = generateRandom(360);
+  const s = generateRandom(100);
+  const l = generateRandom(100);
+  return `hsl(${h}deg, ${s}%, ${l}%)`;
+}
+
+const color2 = (pickColors());
+const color3 = (pickColors());
+const color4 = (pickColors());
+
+const colors = ['black', color2, color3, color4];
+
 for (let i = 0; i < colors.length; i += 1) {
   const colorItem = colors[i];
 
@@ -19,6 +36,7 @@ for (let i = 0; i < colors.length; i += 1) {
   colorSelector.style.backgroundColor = `${colorItem}`;
   section.appendChild(colorSelector);
 }
+section.addEventListener('click', paintColor)
 
 const black = document.querySelectorAll('.color')[0];
 black.classList += " " + "selected";
@@ -31,7 +49,6 @@ function handleSelected(event) {
   const selectedItem = document.querySelector('.selected');
   selectedItem.classList.remove('selected');
   event.target.classList.add('selected');
-  console.log(event.target);
 }
 
 black.addEventListener('click', handleSelected);
@@ -39,7 +56,12 @@ secondColor.addEventListener('click', handleSelected);
 thirdColor.addEventListener('click', handleSelected);
 fourthColor.addEventListener('click', handleSelected);
 
-console.log(handleSelected);
+function paintColor(e) {
+  const selectedColor = document.querySelector('.selected');
+  const style = window.getComputedStyle(selectedColor, null);
+  console.log(selectedColor);
+  let paintBrush = style.getPropertyValue('background-color');
+}
 
 const middleSection = document.createElement('section');
 middleSection.setAttribute('id', 'buttons');
@@ -60,6 +82,7 @@ button.addEventListener('click', function handleClean() {
 const board = document.createElement('section');
 body.appendChild(board);
 board.setAttribute('id', 'pixel-board');
+
 let input = '5';
 const pixelNumbers = Math.pow(input, 2);
 
@@ -70,3 +93,14 @@ for (let i = 0; i < pixelNumbers; i += 1) {
   pixelCreation.style.backgroundColor = 'white';
   board.appendChild(pixelCreation);
 }
+
+function paintStroke(e) {
+  const model = document.querySelector('.selected');
+  e.target.style.backgroundColor = model.style.backgroundColor;
+}
+
+let paintingArea = document.querySelectorAll('.pixel');
+for (let i = 0; i < paintingArea.length; i += 1) {
+  let squares = paintingArea[i];
+  squares.addEventListener('click', paintStroke);
+};
