@@ -60,7 +60,17 @@ function checkBoard() {
   }
 }
 
+const buttonDiffBoard = document.getElementById('different-board');
+
+function eraseBoard() {
+  const boardPixels = document.getElementById('pixel-board');
+  boardPixels.innerHTML = '';
+}
+
+buttonDiffBoard.addEventListener('click', eraseBoard);
+
 function createBoard() {
+  eraseBoard();
   checkBoard();
   const pixelNumbers = (input ** 2);
   for (let i = 0; i < pixelNumbers; i += 1) {
@@ -74,18 +84,6 @@ function createBoard() {
 }
 
 buttonNewBoard.addEventListener('click', createBoard);
-
-const buttonDiffBoard = document.getElementById('different-board');
-
-function eraseBoard() {
-  const boardPixels = document.getElementById('pixel-board');
-  const pixels = document.querySelectorAll('.pixel');
-  // for (let i = 0; i < pixels.length; i += 1) {
-    boardPixels.removeChild(pixels);
-  }
-// }
-
-buttonDiffBoard.addEventListener('click', eraseBoard);
 
 function paintStroke(e) {
   const model = document.querySelector('.selected');
