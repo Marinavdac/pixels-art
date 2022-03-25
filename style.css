@@ -4,41 +4,47 @@
   box-sizing: border-box;
   font-family: 'Roboto Serif', serif;
 }
+body{
+  font: 14px;
+  height: fit-content;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./imgs/wallpaper-md.jpg");
+  background-repeat: round;
+  cursor: pointer;
 
-h1 {
+}
+img{
+  width: 20rem;
+}
+
+h1, h2, p {
   text-align: center;
   margin-top: 2rem;
-}
-
-#color-palette {
-  min-width: 1px;
-  min-height: 1px;
-  text-align: center;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-.color {
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  margin: 0.1rem;
-}
-#buttons{
-  text-align: center;
-}
-#clear-board{
-  display: inline-block;
-  width: fit-content;
-  height: 2.5rem;
+  color: white;
+  line-height: 1.3rem;
   padding: 1rem;
-  border-radius: 10%;
-  line-height: 0;
-  background-color: black;
-  color: hsl(0, 0%, 100%);
-  margin: 1rem auto;
-  cursor: pointer;
+}
+#color-palette{
+ width: fit-content;
+ display: flex;
+ justify-content: center;
+ margin: 0 auto;
+}
+#play-info{
+  /* width: fit-content; */
+  padding: 1rem;
+  text-align: center;
+}
+#btns{
+    display: flex;
+    justify-content:center;
+    padding:1.5rem;
+    gap: 2rem;
+}
+.color {
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem;
+
 }
 #pixel-board {
   margin: 2rem auto;
@@ -46,10 +52,26 @@ h1 {
 }
 .pixel{
   display: inline-block;
+  cursor: pointer;
   width: 40px;
   height: 40px;
   border: 1px solid black;
+}
+#painting-area {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
 
 }
+#green-heart {
+    width: 1.2rem;
+    vertical-align: text-bottom;
 
+}
+#footer{
+    margin-top: 10rem;
+    line-height: 1rem;
+    text-align: center;
+}
 

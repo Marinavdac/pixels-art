@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./imgs/pixel-paint.jpg" />
     <title>Pixels Art</title>
-</head>
-<body>
-<script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>Arte com Pixels</h1>
+      <h1 id="title">Paleta de Cores</h1>
+    </header>
+    <main id="painting-area">
+      <section id="color-palette">
+      </section>
+      <section id="play-info">
+        <div>
+          <p>Digite um número entre 5 e 50 para montar seu quadro de pixels:</p>
+          <input type="text" id="board-size" />
+          <button id="generate-board">Go!</button>
+        </div>
+        <div id="btns">
+
+          <button>#VQV!</button>
+          <button id="clear-board">Limpar</button>
+        </div>
+      </section>
+      <section id="pixel-board">
+
+
+      </section>
+    </main>
+    <footer id="footer">
+        <p>
+          Made with
+          <span role="img"
+            ><img
+              id="green-heart"
+              src="./imgs/green-heart-svgrepo-com.svg"
+              alt="green heart"
+          /></span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
