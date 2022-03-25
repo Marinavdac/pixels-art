@@ -1,7 +1,7 @@
 const colorSection = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const buttonClear = document.getElementById('clear-board');
-const buttonNewBoard = document.getElementById('vqv');
+const buttonNewBoard = document.getElementById('generate-board');
 
 function generateRandom(maxValue) {
   return Math.floor(Math.random() * maxValue);
@@ -45,44 +45,60 @@ secondColor.addEventListener('click', handleSelected);
 thirdColor.addEventListener('click', handleSelected);
 fourthColor.addEventListener('click', handleSelected);
 
-function createBoard() {
-  const boardInput = document.getElementById('board-size');
-  if (boardInput.innerText === '') {
-    alert("você precisa escolher um número entre 5 e 50");
+let input;
+const boardInput = document.getElementById('board-size');
+
+function checkBoard() {
+  if (boardInput.value === '') {
+    alert('Board inválido!');
+  } else if (boardInput.value < 5) {
+    input = 5;
+  } else if (boardInput.value > 50) {
+    input = 50;
+  } else {
+    input = boardInput.value;
   }
+}
+
+function createBoard() {
+  checkBoard();
+  const pixelNumbers = (input ** 2);
+  for (let i = 0; i < pixelNumbers; i += 1) {
+    const pixelCreation = document.createElement('div');
+    pixelBoard.style.width = `${input * 40}px`;
+    pixelCreation.classList = 'pixel';
+    pixelCreation.style.backgroundColor = 'white';
+    pixelBoard.appendChild(pixelCreation);
+  }
+  boardInput.value = '';
 }
 
 buttonNewBoard.addEventListener('click', createBoard);
 
-const input = '5';
+const buttonDiffBoard = document.getElementById('different-board');
 
-const pixelNumbers = (input ** 2);
+function eraseBoard() {
+  const boardPixels = document.getElementById('pixel-board');
+  const pixels = document.querySelectorAll('.pixel');
+  // for (let i = 0; i < pixels.length; i += 1) {
+    boardPixels.removeChild(pixels);
+  }
+// }
 
-for (let i = 0; i < pixelNumbers; i += 1) {
-  const pixelCreation = document.createElement('div');
-  pixelBoard.style.width = `${input * 40}px`;
-  pixelCreation.classList = 'pixel';
-  pixelCreation.style.backgroundColor = 'white';
-  pixelBoard.appendChild(pixelCreation);
-}
+buttonDiffBoard.addEventListener('click', eraseBoard);
 
 function paintStroke(e) {
   const model = document.querySelector('.selected');
   e.target.style.backgroundColor = model.style.backgroundColor;
 }
 
-const paintingArea = document.querySelectorAll('.pixel');
-for (let i = 0; i < paintingArea.length; i += 1) {
-  const squares = paintingArea[i];
-  squares.addEventListener('click', paintStroke);
-}
+const paintingArea = document.querySelector('#pixel-board');
+paintingArea.addEventListener('click', paintStroke);
 
 buttonClear.addEventListener('click', () => {
   const pixelWhite = document.getElementsByClassName('pixel');
   console.log(pixelWhite[0]);
   for (let i = 0; i < pixelWhite.length; i += 1) {
     pixelWhite[i].style.backgroundColor = 'white';
-    console.log(pixelWhite[i].classList.value);
   }
 });
-
