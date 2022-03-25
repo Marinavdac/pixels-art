@@ -20,37 +20,36 @@
       <h1 id="title">Paleta de Cores</h1>
     </header>
     <main id="painting-area">
-      <section id="color-palette">
-      </section>
+      <section id="color-palette"></section>
       <section id="play-info">
         <div>
           <p>Digite um número entre 5 e 50 para montar seu quadro de pixels:</p>
-          <input type="text" id="board-size" />
-          <button id="generate-board">Go!</button>
+          <input
+            type="number"
+            id="board-size"
+            min="5"
+            max="50"
+            placeholder="Escolha um número"
+          />
+          <button id="vqv" class="btn">#VQV!</button>
         </div>
         <div id="btns">
-
-          <button>#VQV!</button>
-          <button id="clear-board">Limpar</button>
+          <button id="clear-board" class="btn">Limpar</button>
         </div>
       </section>
-      <section id="pixel-board">
-
-
-      </section>
+      <section id="pixel-board"></section>
     </main>
     <footer id="footer">
-        <p>
-          Made with
-          <span role="img"
-            ><img
-              id="green-heart"
-              src="./imgs/green-heart-svgrepo-com.svg"
-              alt="green heart"
-          /></span>
-        </p>
+      <p>
+        Made with
+        <span role="img"
+          ><img
+            id="green-heart"
+            src="./imgs/green-heart-svgrepo-com.svg"
+            alt="love"
+        /></span>
+      </p>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>

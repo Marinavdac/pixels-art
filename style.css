@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Serif', serif;
+  cursor: pointer;
 }
 body{
   font: 14px;
   height: fit-content;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./imgs/wallpaper-md.jpg");
-  background-repeat: round;
-  cursor: pointer;
+  background-blend-mode: color-burn;
 
 }
 img{
@@ -30,7 +30,6 @@ h1, h2, p {
  margin: 0 auto;
 }
 #play-info{
-  /* width: fit-content; */
   padding: 1rem;
   text-align: center;
 }
@@ -38,12 +37,22 @@ h1, h2, p {
     display: flex;
     justify-content:center;
     padding:1.5rem;
-    gap: 2rem;
+    gap: 2rem;const buttonNewBoard
+}
+
+.btn{
+  padding: 0.3rem;
+}
+input{
+  padding: 0.3rem;
+  width: 20rem;
+  text-align: center;
 }
 .color {
     width: 3rem;
     height: 3rem;
     margin: 1rem;
+    border: 1px black solid;
 
 }
 #pixel-board {

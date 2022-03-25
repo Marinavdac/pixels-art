@@ -1,8 +1,7 @@
 const colorSection = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
 const buttonClear = document.getElementById('clear-board');
-const boardInput = document.getElementById('board-size');
-const buttonNewBoard = document.getElementById('');
+const buttonNewBoard = document.getElementById('vqv');
 
 function generateRandom(maxValue) {
   return Math.floor(Math.random() * maxValue);
@@ -46,7 +45,17 @@ secondColor.addEventListener('click', handleSelected);
 thirdColor.addEventListener('click', handleSelected);
 fourthColor.addEventListener('click', handleSelected);
 
-const input = '15';
+function createBoard() {
+  const boardInput = document.getElementById('board-size');
+  if (boardInput.innerText === '') {
+    alert("você precisa escolher um número entre 5 e 50");
+  }
+}
+
+buttonNewBoard.addEventListener('click', createBoard);
+
+const input = '5';
+
 const pixelNumbers = (input ** 2);
 
 for (let i = 0; i < pixelNumbers; i += 1) {
@@ -76,3 +85,4 @@ buttonClear.addEventListener('click', () => {
     console.log(pixelWhite[i].classList.value);
   }
 });
+
