@@ -37,12 +37,13 @@ h1, h2, p {
     display: flex;
     justify-content:center;
     padding:1.5rem;
-    gap: 2rem;const buttonNewBoard
+    gap: 2rem;
 }
 
 .btn{
   padding: 0.3rem;
 }
+
 input{
   padding: 0.3rem;
   width: 20rem;
@@ -58,6 +59,7 @@ input{
 #pixel-board{
   margin: 2rem auto;
   font-size: 0;
+  width: 200px;
 }
 .pixel{
   display: inline-block;
@@ -68,17 +70,13 @@ input{
   background-color: white;
 }
 
-.initial{
-  margin-left: 26rem;
-}
-
 #painting-area {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 2rem;
   border-radius: 1rem;
   margin: 2rem auto;
-
 }
+
 #green-heart {
     width: 1.2rem;
     vertical-align: text-bottom;
