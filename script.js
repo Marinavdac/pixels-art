@@ -45,8 +45,14 @@ secondColor.addEventListener('click', handleSelected);
 thirdColor.addEventListener('click', handleSelected);
 fourthColor.addEventListener('click', handleSelected);
 
+
+
 let input;
+
 const boardInput = document.getElementById('board-size');
+
+
+
 
 function checkBoard() {
   if (boardInput.value === '') {

@@ -55,7 +55,7 @@ input{
     border: 1px black solid;
 
 }
-#pixel-board {
+#pixel-board{
   margin: 2rem auto;
   font-size: 0;
 }
@@ -65,7 +65,13 @@ input{
   width: 40px;
   height: 40px;
   border: 1px solid black;
+  background-color: white;
 }
+
+.initial{
+  margin-left: 26rem;
+}
+
 #painting-area {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 2rem;
