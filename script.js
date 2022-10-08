@@ -51,9 +51,6 @@ let input;
 
 const boardInput = document.getElementById('board-size');
 
-
-
-
 function checkBoard() {
   if (boardInput.value === '') {
     alert('Board inválido!');
@@ -73,10 +70,12 @@ function eraseBoard() {
   boardPixels.innerHTML = '';
 }
 
-buttonDiffBoard.addEventListener('click', eraseBoard);
 
 function createBoard() {
   eraseBoard();
+  if (!boardInput.value) {
+    boardInput.value = '5';
+  };
   checkBoard();
   const pixelNumbers = (input ** 2);
   for (let i = 0; i < pixelNumbers; i += 1) {
@@ -86,8 +85,11 @@ function createBoard() {
     pixelCreation.style.backgroundColor = 'white';
     pixelBoard.appendChild(pixelCreation);
   }
+
   boardInput.value = '';
 }
+
+buttonDiffBoard.addEventListener('click', createBoard);
 
 buttonNewBoard.addEventListener('click', createBoard);
 

@@ -10,8 +10,10 @@ body{
   height: fit-content;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./imgs/wallpaper-md.jpg");
   background-blend-mode: color-burn;
-
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 img{
   width: 20rem;
 }
