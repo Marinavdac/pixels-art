@@ -1,16 +1,34 @@
-# 🚧 README em construção 🚧
+# Pixels Art :art:
 
-<!-- Olá, Tryber!
+Esse projeto foi realizado durante o curso da Trybe, no módulo de Fundamentos para exercitar a construção de uma aplicação em JavaScript puro e capaz de responder às instruções da pessoa usuária para criar quadros.
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+## A Página
 
-É essencial que você preencha esse documento por conta própria, ok?
+Para ver a aplicação ao vivo, e também se divertir criando desenhos em pixels, clique [aqui](https://marinavdac.github.io/pixels-art/)
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+![pixels-art](https://user-images.githubusercontent.com/76450683/194686769-b46b8e48-8936-4061-b4d3-3c30c4b02a27.png)
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+## Como Instalar:
 
--->
+* Clone o repositório
+* Na pasta da aplicação, no terminal use o Live Server
+* Após utilizar o Live Sever será possível ver a aplicação no seu Browser Local
+
+## Desenvolvimento
+
+Pixels Art é um um jogo para criar quadros e pintar seus pixels com as cores aleatórias geradas em sua paleta de cores. É possivel:
+
+* Criar novos quadros com quadrados de pixels variáveis
+* Pintar os pixels com as cores selecionadas
+* Apagar o quadro todo
+* Gerar novos quadros
+
+## Habilidades utilizadas
+
+* Página desenvolvida com CSS puro e responsivo
+* Vanilla JavaScript para as funções e ações do quadro
+
+## License
+Distributed under the MIT License.
+
+Made with 🖤
